@@ -207,3 +207,31 @@ ReactDOM.render(
     <ActionLink />,
     document.getElementById('ClickHref')
 )
+
+class Toggle extends React.Component {
+    constructor(props){
+        super(props);
+        this.state = {isToggleOn: true};
+        
+    }
+
+    handleClick() {
+        this.setState( prevState => ({
+            isToggleOn: !prevState.isToggleOn
+        }));
+    }
+
+    render(){
+        return(
+          <button onClick={this.handleClick}>
+            {this.state.isToggleOn ? 'ON':'Off'}
+          </button>
+        );
+    }
+
+}
+
+ReactDOM.render(
+    <Toggle />,
+    document.getElementById("Toggle")
+)
