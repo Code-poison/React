@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
+registerServiceWorker();
 ReactDOM.render(<App />, document.getElementById('root'));
 
 /**Hello World */
@@ -187,4 +188,22 @@ ReactDOM.render(
     document.getElementById('Clock')
 )
 
-registerServiceWorker();
+
+/**Handling Events */
+
+function ActionLink(){
+    function HandleClick(e){
+        e.preventDefault();
+        console.log('The link was clicked.');
+    }
+    return(
+        <a href="#" onClick={HandleClick}>
+          Click me
+        </a>
+    )
+}
+
+ReactDOM.render(
+    <ActionLink />,
+    document.getElementById('ClickHref')
+)
