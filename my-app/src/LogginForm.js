@@ -23,19 +23,23 @@ class LoggingForm extends Component {
 
   render (){
     return (
-      <form>
-        <label>
-          Account: 
-          <input type="text" name="account" value={this.state.account} onChange={this.handleChange}/>
-        </label>
-        <br />
-        <label>
-          Passwords: 
-          <input type="text" name="passwords" value={this.state.passwords} onChange={this.handleChange}/>
-        </label>
-        <br />
-        <input type="submit" name="submit" value="確認" onClick={this.submit}/>
-      </form>
+      <div className="stand">
+        <div className="outer-screen">
+          <div className="inner-screen">
+            <form name="form">
+              <label>            
+                <input type="text" name="account" placeholder="User ID" value={this.state.account} onChange=    {this.handleChange}/>
+              </label>
+              <br />
+              <label>             
+                <input type="text" name="passwords"  placeholder="Passwords" value={this.state.passwords} onChange=    {this.handleChange}/>
+              </label>
+              <br />
+              <input type="submit" name="submit" value="確認" onClick={this.submit}/>
+            </form>
+          </div>
+        </div>  
+      </div>
     );
   }
 }
