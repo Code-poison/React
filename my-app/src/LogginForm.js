@@ -17,7 +17,8 @@ class LoggingForm extends Component {
   }
 
   submit = (event) => {
-    console.log("Account: " + this.state.account + "  " + "PassWords: " + this.state.passwords);
+    const output = "Account: " + this.state.account + "  " + "PassWords: " + this.state.passwords;
+    console.log(output);
     event.preventDefault();
   }
 
